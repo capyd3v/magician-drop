@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versus Mode - Magical Drop</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ Modo Versus</h1>
+        <div class="versus-container">
+            <div class="player-setup">
+                <input type="text" id="player-name" placeholder="Tu nombre" maxlength="10">
+                <input type="text" id="game-id" placeholder="ID de Sala (opcional)">
+                <button id="join-game" class="btn">Unirse a Sala</button>
+                <button id="create-game" class="btn">Crear Nueva Sala</button>
+            </div>
+            
+            <div class="game-area" style="display: none;">
+                <div class="players-info">
+                    <div id="player1-info" class="player-info"></div>
+                    <div id="player2-info" class="player-info"></div>
+                </div>
+                
+                <div class="boards-container">
+                    <div class="player-board">
+                        <h3 id="current-player">Tú</h3>
+                        <div id="player-field"></div>
+                        <div class="current-chain">
+                            <h4>Cadena Actual:</h4>
+                            <div id="chain-display"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="vs-separator">VS</div>
+                    
+                    <div class="player-board">
+                        <h3 id="opponent-player">Oponente</h3>
+                        <div id="opponent-field"></div>
+                    </div>
+                </div>
+                
+                <div id="game-status">Esperando jugador...</div>
+                <a href="/" class="btn">Menú Principal</a>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
